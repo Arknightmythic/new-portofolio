@@ -24,6 +24,7 @@ import MongoSVg from '../assets/mongodb.svg'
 import IconBadge from './ui/iconBadge'
 import BadgeSection from './ui/badgeSection'
 
+
 export default function Skill() {
   const skills = [
   { name: 'React', icon: ReactSVG },
@@ -52,8 +53,8 @@ export default function Skill() {
 ];
   return (
     <div className='bg-[#0A192F] w-full py-10' id='skills'>
-      <div className="grid grid-cols-2 max-w-6xl mx-auto gap-5">
-        <div className="px-4">
+      <div className="grid md:grid-cols-2 grid-cols-1 max-w-6xl mx-auto gap-5">
+        <div className="px-4 md:flex-none flex flex-col items-center md:items-start md:justify-normal justify-center text-center">
           <div className="flex mb-6">
             <BadgeSection name={'skill'}/>
           </div>
@@ -73,7 +74,7 @@ export default function Skill() {
               </p>
 
             </div>
-            <div className="max-w-4xl mr-auto mt-5 grid grid-cols-5 gap-5">
+            <div className="max-w-4xl md:mr-auto md:mx-0 mx-auto mt-5 grid grid-cols-5 gap-5">
               {
                 skills.map((tech, index) =>(
                   <IconBadge key={index} name={tech.name} image={tech.icon}/>

@@ -2,6 +2,7 @@ import { Download, Linkedin, Github} from "lucide-react";
 import { Button } from "./ui/button";
 import BadgeSection from "./ui/badgeSection";
 
+
 export default function About() {
   return (
     <div id="about" className='bg-[#0A192F] w-full py-10'>
