@@ -21,42 +21,45 @@ import xamppSVg from '../assets/xampp.svg'
 import NodeSVg from '../assets/nodedotjs.svg'
 import JsSVg from '../assets/javascript.svg'
 import MongoSVg from '../assets/mongodb.svg'
-import IconBadge from './ui/iconBadge'
-import BadgeSection from './ui/badgeSection'
+import BadgeSection from './custom-ui/BadgeSection'
+import IconBadge from './custom-ui/iconBadge'
+
+
+
 
 
 export default function Skill() {
   const skills = [
-  { name: 'React', icon: ReactSVG },
-  { name: 'Laravel', icon: LaravelSVG },
-  { name: 'Node.js', icon: NodeSVg },
-  { name: 'Next.js', icon: NextSVg },
-  { name: 'Tailwind CSS', icon: TailwindsSVg },
-  { name: 'Bootstrap', icon: bootstrapSVg },
-  { name: 'JavaScript', icon: JsSVg },
-  { name: 'HTML5', icon: HtmlSVg },
-  { name: 'CSS3', icon: cssSVg },
-  { name: 'PHP', icon: PHPSVg },
-  { name: 'Laragon', icon: LaragonSVg },
-  { name: 'MongoDB', icon: MongoSVg },
-  { name: 'MySQL', icon: MysqlSVg },
-  { name: 'Express', icon: ExpressSVg },
-  { name: 'XAMPP', icon: xamppSVg },
-  { name: 'TypeScript', icon: TsSVg },
-  { name: 'Google Cloud', icon: GCSVg },
-  { name: 'Firebase', icon: FirebaseSVg },
-  { name: 'CodeIgniter', icon: codeIgnitierSVG },
-  { name: 'Python', icon: pythonSVg },
-  { name: 'Django', icon: djangoVg },
-  { name: 'Go', icon: GoSVg },
-  { name: 'Docker', icon: DockerSVg },
-];
+    { name: 'React', icon: ReactSVG },
+    { name: 'Laravel', icon: LaravelSVG },
+    { name: 'Node.js', icon: NodeSVg },
+    { name: 'Next.js', icon: NextSVg },
+    { name: 'Tailwind CSS', icon: TailwindsSVg },
+    { name: 'Bootstrap', icon: bootstrapSVg },
+    { name: 'JavaScript', icon: JsSVg },
+    { name: 'HTML5', icon: HtmlSVg },
+    { name: 'CSS3', icon: cssSVg },
+    { name: 'PHP', icon: PHPSVg },
+    { name: 'Laragon', icon: LaragonSVg },
+    { name: 'MongoDB', icon: MongoSVg },
+    { name: 'MySQL', icon: MysqlSVg },
+    { name: 'Express', icon: ExpressSVg },
+    { name: 'XAMPP', icon: xamppSVg },
+    { name: 'TypeScript', icon: TsSVg },
+    { name: 'Google Cloud', icon: GCSVg },
+    { name: 'Firebase', icon: FirebaseSVg },
+    { name: 'CodeIgniter', icon: codeIgnitierSVG },
+    { name: 'Python', icon: pythonSVg },
+    { name: 'Django', icon: djangoVg },
+    { name: 'Go', icon: GoSVg },
+    { name: 'Docker', icon: DockerSVg },
+  ];
   return (
     <div className='bg-[#0A192F] w-full py-10' id='skills'>
       <div className="grid md:grid-cols-2 grid-cols-1 max-w-6xl mx-auto gap-5">
         <div className="px-4 md:flex-none flex flex-col items-center md:items-start md:justify-normal justify-center text-center">
           <div className="flex mb-6">
-            <BadgeSection name={'skill'}/>
+            <BadgeSection name={'skill'} />
           </div>
           <div className="max-w-4xl mx-auto text-left">
             <h4 className="text-[#F5F7FA] md:text-[50px] text-xl font-bold leading-relaxed my-4">
@@ -76,9 +79,9 @@ export default function Skill() {
             </div>
             <div className="max-w-4xl md:mr-auto md:mx-0 mx-auto mt-5 grid grid-cols-5 gap-5">
               {
-                skills.map((tech, index) =>(
-                  <IconBadge key={index} name={tech.name} image={tech.icon}/>
-                ) )
+                skills.map((tech, index) => (
+                  <IconBadge key={index} name={tech.name} image={tech.icon} />
+                ))
               }
 
 
