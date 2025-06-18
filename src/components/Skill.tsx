@@ -63,7 +63,7 @@ export default function Skill() {
           </div>
           <div className="max-w-4xl mx-auto text-left">
             <h4 className="text-[#F5F7FA] md:text-[50px] text-xl font-bold leading-relaxed my-4">
-              Hanya bisa React, Node Js, Laravel tech stack?
+              Hanya bisa React, Node Js, Laravel saja?
             </h4>
 
           </div>

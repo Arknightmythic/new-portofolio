@@ -13,25 +13,16 @@ import Experience from './components/Experience';
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother);
 
 function App() {
-  // Fix: Properly type the refs
   const main = useRef<HTMLDivElement>(null);
   const smoother = useRef<ScrollSmoother | null>(null);
 
   useGSAP(
     () => {
-      // create the smooth scroller FIRST!
+    
       smoother.current = ScrollSmoother.create({
-        smooth: 1.5, // seconds it takes to "catch up" to native scroll position
-        effects: true, // look for data-speed and data-lag attributes on elements and animate accordingly
+        smooth: 1.5, 
+        effects: true, 
       });
-      
-      // Remove this ScrollTrigger if .box-c doesn't exist in your components
-      // ScrollTrigger.create({
-      //   trigger: '.box-c',
-      //   pin: true,
-      //   start: 'center center',
-      //   end: '+=300',
-      // });
     },
     { scope: main }
   );
