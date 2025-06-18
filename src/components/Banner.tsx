@@ -2,7 +2,7 @@ import MyPhoto from "../assets/erasebg-transformed.webp";
 
 export default function Banner() {
   return (
-    <div className="relative w-full mt-20 pt-10 bg-[#F5F7FA] flex flex-col justify-center text-center overflow-hidden">
+    <div className="relative w-full mt-10 pt-20 bg-[#F5F7FA] flex flex-col justify-center text-center overflow-hidden">
       {/* Content on top of gradient */}
       <div className="relative z-10">
         <h4 className="text-[#0A192F] md:text-[30px] text-lg font-medium">Full Stack Developer</h4>

@@ -11,7 +11,7 @@ export default function About() {
     <div id="about" className='bg-[#0A192F] w-full py-10'>
       <div className="flex flex-col items-center justify-center text-center px-4 max-w-6xl mx-auto">
         <div className="mb-6">
-          <BadgeSection name="about" />
+          <BadgeSection name="about" borderColor={'#F5F7FA'}/>
         </div>
         <div className="max-w-4xl mx-auto text-center">
           <p id="abouttext" className="text-[#F5F7FA] text-lg leading-relaxed my-4">

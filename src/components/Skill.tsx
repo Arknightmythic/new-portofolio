@@ -59,7 +59,7 @@ export default function Skill() {
       <div className="grid md:grid-cols-2 grid-cols-1 max-w-6xl mx-auto gap-5">
         <div className="px-4 md:flex-none flex flex-col items-center md:items-start md:justify-normal justify-center text-center">
           <div className="flex mb-6">
-            <BadgeSection name={'skill'} />
+            <BadgeSection name={'skill'} borderColor={'#F5F7FA'}/>
           </div>
           <div className="max-w-4xl mx-auto text-left">
             <h4 className="text-[#F5F7FA] md:text-[50px] text-xl font-bold leading-relaxed my-4">

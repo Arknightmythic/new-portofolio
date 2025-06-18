@@ -1,10 +1,11 @@
 interface BadgeSectionProps {
   name: string;
+  borderColor: string
 }
 
-export default function BadgeSection({ name }: BadgeSectionProps) {
+export default function BadgeSection({ name, borderColor }: BadgeSectionProps) {
   return (
-    <p className="text-[#F5F7FA] border-2 border-[#F5F7FA] px-3 py-1 rounded-full">
+    <p className={`text-[${borderColor}] border-2 border-[${borderColor}] px-3 py-1 rounded-full`}>
       {name}
     </p>
   );
