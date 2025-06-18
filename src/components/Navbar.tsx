@@ -20,7 +20,7 @@ const navItems = [
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
-    const scrollTo = (section) => {
+    const scrollTo = (section: string) => {
         // Get the ScrollSmoother instance that was created in App component
         const smoother = ScrollSmoother.get();
         
