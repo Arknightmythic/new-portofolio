@@ -120,7 +120,7 @@ export default function Experience() {
               Apa saja pengalamannya sebagai full-stack Developer?
             </h4>
             <p className="text-[#0A192F] text-lg leading-relaxed">
-              Selama perjalanan saya sebagai Full-Stack Developer, saya telah menangani berbagai proyek — mulai dari website company profile, sistem manajemen data, hingga aplikasi interaktif. Setiap pengalaman ini memperkuat pemahaman saya akan pengembangan frontend dan backend, sekaligus membentuk cara mengajarkan saya cara untuk bekerja secara kolaboratif dan efisien.
+              Selama perjalanan saya sebagai Full-Stack Developer , saya telah menangani berbagai proyek — mulai dari website company profile, sistem manajemen data, hingga aplikasi interaktif. Setiap pengalaman ini memperkuat pemahaman saya akan pengembangan frontend dan backend, sekaligus membentuk cara mengajarkan saya cara untuk bekerja secara kolaboratif dan efisien.
             </p>
           </div>
         </div>

@@ -9,6 +9,7 @@ import Banner from "./components/Banner"
 import Navbar from "./components/Navbar"
 import Skill from "./components/Skill"
 import Experience from './components/Experience';
+import Portofolio from './components/Portofolio';
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother);
 
@@ -18,10 +19,10 @@ function App() {
 
   useGSAP(
     () => {
-    
+
       smoother.current = ScrollSmoother.create({
-        smooth: 1.5, 
-        effects: true, 
+        smooth: 2,
+        effects: true,
       });
     },
     { scope: main }
@@ -34,7 +35,9 @@ function App() {
         <Banner />
         <About />
         <Skill />
-        <Experience />
+        <div className='bg-[#F5F7FA]'> <Experience />
+          <Portofolio /></div>
+
       </div>
     </div>
   );
