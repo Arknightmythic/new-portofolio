@@ -2,6 +2,8 @@ import { ArrowRightSquare } from "lucide-react";
 import { useEffect, useRef, useState, useMemo } from 'react';
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { gsap } from 'gsap';
+import { Skeleton } from "@/components/ui/skeleton"
+
 
 // Mock BadgeSection component for demo
 const BadgeSection = ({ name, borderColor }: { name: string; borderColor: string }) => (
@@ -13,7 +15,8 @@ const BadgeSection = ({ name, borderColor }: { name: string; borderColor: string
 export default function Portfolio() {
   const [selectedItem, setSelectedItem] = useState<string>('');
   const itemRefs = useRef<Array<HTMLButtonElement | null>>([]);
-
+  const [loading, setLoading] = useState(true);
+  
   // Sample data - wrapped in useMemo to fix exhaustive-deps warning
   const listItems = useMemo(() => [
     { id: 'item1', title: 'Web Application', subtitle: 'React & Node.js' },
@@ -24,7 +27,7 @@ export default function Portfolio() {
   useEffect(() => {
     // Initialize refs array
     itemRefs.current = itemRefs.current.slice(0, listItems.length);
-    
+
     // Set initial state for all items
     itemRefs.current.forEach((element) => {
       if (element) {
@@ -123,7 +126,7 @@ export default function Portfolio() {
                     "
                     ref={el => { itemRefs.current[index] = el; }}
                   >
-                  
+
                     <div className="w-full py-1">
                       <div className={`
                         flex items-center px-2 border-b-2 gap-4
@@ -158,14 +161,19 @@ export default function Portfolio() {
         <div className="px-4">
           <div className="flex flex-col">
             <div className="max-w-4xl mx-auto w-full text-left">
-              <iframe
+              <div className="w-full">
+                {loading && <Skeleton className="w-full h-full" />}
+                <iframe
                 className="w-full aspect-video my-4"
                 src={`https://www.youtube.com/embed/7ynHVGCehoM?si=heerM3KnIDqdfrZJ`}
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
-              />
+                loading="lazy"
+                onLoad={() => setLoading(false)}
+              /></div>
+
               <p className="text-[#0A192F] text-lg leading-relaxed">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
               </p>
